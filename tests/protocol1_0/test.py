@@ -23,7 +23,6 @@ present = [0, 590, 495, 440, 445, 540, 600, 430, 433, 525, 491, 540, 435]
 #Algorithm of the walking
 for frame in range(0,51,1): # Each frame are in loop (we can change of the range value that we can need it)
     for motor_id in range(1,13): # This is respect to motor id declaration 
-        motor_cntrl.SDK(motor_id, present[motor_id], multiplied(dfm[frame, motor_id+1])+present[motor_id])
+        motor_cntrl.SDK(motor_id, present[motor_id], multiplied(dfm[frame][motor_id+1])+present[motor_id])
     
-    time.sleep(DELAY_BETWEEN_FRAMES) # Delay for frames    
-    
+    time.sleep(DELAY_BETWEEN_FRAMES) # Delay for frames
